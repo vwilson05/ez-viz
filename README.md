@@ -1,6 +1,6 @@
 # EZViz - Modern Data Analytics Platform
 
-EZViz is a powerful, modern data analytics platform designed to help businesses connect to their data warehouse, analyze their data, and build interactive workbooks and dashboards. With a clean, intuitive interface, EZViz makes it easy for users of all technical levels to gain insights from their data.
+EZViz is a lightweight analytics platform designed to help businesses connect to their data warehouse, analyze their data, and build interactive workbooks and dashboards. With a clean, intuitive interface, EZViz makes it easy for users of all technical levels to gain insights from their data.
 
 ![EZViz Demo](https://via.placeholder.com/800x450.png?text=EZViz+Dashboard)
 
