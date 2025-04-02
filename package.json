@@ -1,0 +1,41 @@
+{
+  "name": "ezviz",
+  "version": "1.0.0",
+  "description": "A simple, clean, and responsive BI tool for viewing data in Snowflake",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "start:custom": "node server.js",
+    "lint": "next lint",
+    "tailwind:init": "npx tailwindcss init -p"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@headlessui/react": "^2.2.0",
+    "@heroicons/react": "^2.2.0",
+    "@types/node": "^22.13.17",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^9.23.0",
+    "eslint-config-next": "^15.2.4",
+    "next": "^15.2.4",
+    "postcss": "^8.4.23",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-hook-form": "^7.55.0",
+    "react-table": "^7.8.0",
+    "snowflake-sdk": "^1.8.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5.8.2",
+    "zustand": "^5.0.3"
+  },
+  "devDependencies": {
+    "@types/react-table": "^7.7.20"
+  }
+}

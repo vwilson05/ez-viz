@@ -1,0 +1,25 @@
+"use strict";
+/*
+ * ATTENTION: An "eval-source-map" devtool has been used.
+ * This devtool is neither made for production nor for readable output files.
+ * It uses "eval()" calls to create a separate source file with attached SourceMaps in the browser devtools.
+ * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
+ * or disable the default devtool with "devtool: false".
+ * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
+ */
+exports.id = "vendor-chunks/parse-passwd";
+exports.ids = ["vendor-chunks/parse-passwd"];
+exports.modules = {
+
+/***/ "(rsc)/./node_modules/parse-passwd/index.js":
+/*!********************************************!*\
+  !*** ./node_modules/parse-passwd/index.js ***!
+  \********************************************/
+/***/ ((module) => {
+
+eval("\n\n/**\n * Parse the content of a passwd file into a list of user objects.\n * This function ignores blank lines and comments.\n *\n * ```js\n * // assuming '/etc/passwd' contains:\n * // doowb:*:123:123:Brian Woodward:/Users/doowb:/bin/bash\n * console.log(parse(fs.readFileSync('/etc/passwd', 'utf8')));\n *\n * //=> [\n * //=>   {\n * //=>     username: 'doowb',\n * //=>     password: '*',\n * //=>     uid: '123',\n * //=>     gid: '123',\n * //=>     gecos: 'Brian Woodward',\n * //=>     homedir: '/Users/doowb',\n * //=>     shell: '/bin/bash'\n * //=>   }\n * //=> ]\n * ```\n * @param  {String} `content` Content of a passwd file to parse.\n * @return {Array} Array of user objects parsed from the content.\n * @api public\n */\n\nmodule.exports = function(content) {\n  if (typeof content !== 'string') {\n    throw new Error('expected a string');\n  }\n  return content\n    .split('\\n')\n    .map(user)\n    .filter(Boolean);\n};\n\nfunction user(line, i) {\n  if (!line || !line.length || line.charAt(0) === '#') {\n    return null;\n  }\n\n  // see https://en.wikipedia.org/wiki/Passwd for field descriptions\n  var fields = line.split(':');\n  return {\n    username: fields[0],\n    password: fields[1],\n    uid: fields[2],\n    gid: fields[3],\n    // see https://en.wikipedia.org/wiki/Gecos_field for GECOS field descriptions\n    gecos: fields[4],\n    homedir: fields[5],\n    shell: fields[6]\n  };\n}\n//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiKHJzYykvLi9ub2RlX21vZHVsZXMvcGFyc2UtcGFzc3dkL2luZGV4LmpzIiwibWFwcGluZ3MiOiJBQUFhOztBQUViO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBLFlBQVksUUFBUTtBQUNwQixZQUFZLE9BQU87QUFDbkI7QUFDQTs7QUFFQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7O0FBRUE7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VzIjpbIi9Vc2Vycy92aWN0b3J3aWxzb24vRGVza3RvcC9wcm9qZWN0cy9FWlZpei9ub2RlX21vZHVsZXMvcGFyc2UtcGFzc3dkL2luZGV4LmpzIl0sInNvdXJjZXNDb250ZW50IjpbIid1c2Ugc3RyaWN0JztcblxuLyoqXG4gKiBQYXJzZSB0aGUgY29udGVudCBvZiBhIHBhc3N3ZCBmaWxlIGludG8gYSBsaXN0IG9mIHVzZXIgb2JqZWN0cy5cbiAqIFRoaXMgZnVuY3Rpb24gaWdub3JlcyBibGFuayBsaW5lcyBhbmQgY29tbWVudHMuXG4gKlxuICogYGBganNcbiAqIC8vIGFzc3VtaW5nICcvZXRjL3Bhc3N3ZCcgY29udGFpbnM6XG4gKiAvLyBkb293YjoqOjEyMzoxMjM6QnJpYW4gV29vZHdhcmQ6L1VzZXJzL2Rvb3diOi9iaW4vYmFzaFxuICogY29uc29sZS5sb2cocGFyc2UoZnMucmVhZEZpbGVTeW5jKCcvZXRjL3Bhc3N3ZCcsICd1dGY4JykpKTtcbiAqXG4gKiAvLz0+IFtcbiAqIC8vPT4gICB7XG4gKiAvLz0+ICAgICB1c2VybmFtZTogJ2Rvb3diJyxcbiAqIC8vPT4gICAgIHBhc3N3b3JkOiAnKicsXG4gKiAvLz0+ICAgICB1aWQ6ICcxMjMnLFxuICogLy89PiAgICAgZ2lkOiAnMTIzJyxcbiAqIC8vPT4gICAgIGdlY29zOiAnQnJpYW4gV29vZHdhcmQnLFxuICogLy89PiAgICAgaG9tZWRpcjogJy9Vc2Vycy9kb293YicsXG4gKiAvLz0+ICAgICBzaGVsbDogJy9iaW4vYmFzaCdcbiAqIC8vPT4gICB9XG4gKiAvLz0+IF1cbiAqIGBgYFxuICogQHBhcmFtICB7U3RyaW5nfSBgY29udGVudGAgQ29udGVudCBvZiBhIHBhc3N3ZCBmaWxlIHRvIHBhcnNlLlxuICogQHJldHVybiB7QXJyYXl9IEFycmF5IG9mIHVzZXIgb2JqZWN0cyBwYXJzZWQgZnJvbSB0aGUgY29udGVudC5cbiAqIEBhcGkgcHVibGljXG4gKi9cblxubW9kdWxlLmV4cG9ydHMgPSBmdW5jdGlvbihjb250ZW50KSB7XG4gIGlmICh0eXBlb2YgY29udGVudCAhPT0gJ3N0cmluZycpIHtcbiAgICB0aHJvdyBuZXcgRXJyb3IoJ2V4cGVjdGVkIGEgc3RyaW5nJyk7XG4gIH1cbiAgcmV0dXJuIGNvbnRlbnRcbiAgICAuc3BsaXQoJ1xcbicpXG4gICAgLm1hcCh1c2VyKVxuICAgIC5maWx0ZXIoQm9vbGVhbik7XG59O1xuXG5mdW5jdGlvbiB1c2VyKGxpbmUsIGkpIHtcbiAgaWYgKCFsaW5lIHx8ICFsaW5lLmxlbmd0aCB8fCBsaW5lLmNoYXJBdCgwKSA9PT0gJyMnKSB7XG4gICAgcmV0dXJuIG51bGw7XG4gIH1cblxuICAvLyBzZWUgaHR0cHM6Ly9lbi53aWtpcGVkaWEub3JnL3dpa2kvUGFzc3dkIGZvciBmaWVsZCBkZXNjcmlwdGlvbnNcbiAgdmFyIGZpZWxkcyA9IGxpbmUuc3BsaXQoJzonKTtcbiAgcmV0dXJuIHtcbiAgICB1c2VybmFtZTogZmllbGRzWzBdLFxuICAgIHBhc3N3b3JkOiBmaWVsZHNbMV0sXG4gICAgdWlkOiBmaWVsZHNbMl0sXG4gICAgZ2lkOiBmaWVsZHNbM10sXG4gICAgLy8gc2VlIGh0dHBzOi8vZW4ud2lraXBlZGlhLm9yZy93aWtpL0dlY29zX2ZpZWxkIGZvciBHRUNPUyBmaWVsZCBkZXNjcmlwdGlvbnNcbiAgICBnZWNvczogZmllbGRzWzRdLFxuICAgIGhvbWVkaXI6IGZpZWxkc1s1XSxcbiAgICBzaGVsbDogZmllbGRzWzZdXG4gIH07XG59XG4iXSwibmFtZXMiOltdLCJpZ25vcmVMaXN0IjpbMF0sInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///(rsc)/./node_modules/parse-passwd/index.js\n");
+
+/***/ })
+
+};
+;
